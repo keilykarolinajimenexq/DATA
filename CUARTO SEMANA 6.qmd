@@ -1,0 +1,53 @@
+---
+title: "SEMANA 6 (KEILY)"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+**#Como limpiar una data para utilizar una column especifica**
+
+**#SELECCIONAR EN LA PESTAÑA SUPERIOR DERECHA IMORT DATASET Y SELECCIONAR FROM TEXT (READR)**
+
+**#Seleccionar browse para buscar una data**
+
+**#Importar el archivo anteriormente descargado**
+
+```{r}
+library(readr)
+diabetes <- read_csv("C:/Users/KAROLINA/OneDrive/Documentos/fundamentos II/ESTADISTICA KEILY/diabetes.csv")
+View(diabetes)
+```
+
+**#Limpiar data**
+
+```{r}
+data <- ("C:/Users/KAROLINA/OneDrive/Documentos/fundamentos II/ESTADISTICA KEILY/diabetes.csv")
+```
+
+**#Ver base**
+
+```{r}
+View(data)
+```
+
+**#limpiar datos eliminando filas donde falte la columna insulina**
+
+```{r}
+data <- readr::read_csv("C:/Users/KAROLINA/OneDrive/Documentos/fundamentos II/ESTADISTICA KEILY/diabetes.csv")
+data_limpia <- data[!is.na(data$insulina_2h), ]
+```
+
+#Calculos especifico
+
+```{r}
+mean(data$glucosa, na.rm = TRUE)
+median(data$glucosa, na.rm = TRUE)
+mean(data$imc, na.rm = TRUE)
+var(data$imc, na.rm = TRUE)
+```
