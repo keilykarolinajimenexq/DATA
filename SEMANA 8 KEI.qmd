@@ -1,0 +1,35 @@
+---
+title: "SEMANA 8 (KEILY)"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+#COMO INSTALAR UN PAQUETE EN RSTUDIO – REALIZA TU GRAFICO ESTADISTICO
+
+\# SELECCIONAR LA DATA A TRABAJAR
+
+```{r}
+data <- read_csv("C:/Users/KAROLINA/OneDrive/Documentos/fundamentos II/ESTADISTICA KEILY/diabetes.csv")
+diabetes <- read_csv("C:/Users/KAROLINA/OneDrive/Documentos/fundamentos II/ESTADISTICA KEILY/diabetes.csv")
+```
+
+# INSTALAR PAQUETES
+
+```{r}
+library(readr)
+
+```
+
+```{r}
+hist(data$edad,
+     main = "Histograma de Edad",
+     xlab = "Edad",
+     col = "lightblue",
+     border = "magenta")
+```
