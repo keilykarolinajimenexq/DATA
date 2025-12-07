@@ -1,0 +1,37 @@
+---
+title: "SEMANA 10 CUARTO"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+**#SELECCIONAR DATA TRABAJAR**
+
+```{r}
+data <- read_csv("C:/Users/KAROLINA/OneDrive/Documentos/estadistica/bac_aguda.csv")
+bac_aguda <- read_csv("C:/Users/KAROLINA/OneDrive/Documentos/estadistica/bac_aguda.csv")
+```
+
+**#MEDIA ARITMETICA**
+
+```{r}
+mean(bac_aguda$edad, na.rm = TRUE)
+```
+
+**#MODA**
+
+```{r}
+moda_edad <- names(sort(table(bac_aguda$edad), decreasing = TRUE))
+moda_edad[1]
+```
+
+**#MEDIA**
+
+```{r}
+median(bac_aguda$edad, na.rm = TRUE)
+```
